@@ -7,7 +7,7 @@ This repo contains VirtualBox VM definitions that are created using Vagrantfiles
 * Debian 9.4
 * Go 10.3
 * Docker CE
-* MATE desktop
+* Cinnamin desktop
 * Visual Studio Code
 * Google Chrome
 
