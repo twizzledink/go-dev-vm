@@ -27,15 +27,12 @@ Vagrant.configure("2") do |config|
 	end
 
 	config.vm.provision "file", source: "resources/sshd_config", destination: "sshd_config"
-	config.vm.provision "file", source: "resources/VBoxGuestAdditions.iso", destination: "VBoxGuestAdditions.iso"
 
 	config.vm.provision "shell", path: "scripts/ssh.sh"
 	config.vm.provision "shell", path: "scripts/base-pkgs.sh"
 	config.vm.provision "shell", path: "scripts/golang.sh"
 	config.vm.provision "shell", path: "scripts/docker-ce.sh"
-	# config.vm.provision "shell", path: "scripts/k8s.sh"
 	config.vm.provision "shell", path: "scripts/desktop.sh"
 	config.vm.provision "shell", path: "scripts/vscode.sh"
-
 	config.vm.provision "shell", inline: "sudo reboot"
 end
