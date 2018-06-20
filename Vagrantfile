@@ -2,13 +2,13 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-	config.vm.network "private_network", ip: "192.168.42.10"
+	config.vm.network "private_network", ip: "192.168.42.11"
 	config.vm.box = "debian/stretch64"
 	config.disksize.size = '20GB'
 	config.vm.box_version = "9.4.0"
-	config.vm.hostname = "go-vbox"
+	config.vm.hostname = "deb-go-vbox"
 	config.vm.provider "virtualbox" do |vb|
-		vb.name = "go-vbox"
+		vb.name = "deb-go-vbox"
 
 		# Adjust to about half of your system's memory; value is in MB.
 		vb.memory = "10240"
@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
 	end
 
 	config.vm.provision "file", source: "resources/sshd_config", destination: "sshd_config"
-	config.vm.provision "file", source: "resources/VBoxGuestAdditions.iso", destination: "VBoxGuestAdditions.iso"
+	# config.vm.provision "file", source: "resources/VBoxGuestAdditions.iso", destination: "VBoxGuestAdditions.iso"
 
 	config.vm.provision "shell", path: "scripts/ssh.sh"
 	config.vm.provision "shell", path: "scripts/base-pkgs.sh"
