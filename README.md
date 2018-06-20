@@ -20,7 +20,7 @@ This repo contains VirtualBox VM definitions that are created using Vagrantfiles
 
 ## Building from Scratch
 
-1. Clone the repo to a directory on your local machine: `git clone https://<your user name>@bitbucket.org/smartdrive_systems/dev-vbox.git`
+1. Clone the repo to a directory on your local machine: `git clone https://github.com/twizzledink/go-dev-vm.git`
 
 2. Open a command prompt or terminal and enter: `vagrant up`
 
