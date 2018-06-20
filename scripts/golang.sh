@@ -23,4 +23,7 @@ sudo chown -R vagrant:vagrant $GOPATH
 printf '\n\ninstalling dep  ...\n'
 sudo curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 sudo rm go1.10.3.linux-amd64.tar.gz
+
+# a great unit testing assert package!
+go get "github.com/stretchr/testify/assert"
 printf "\n\nfinished installing Go!\n"
