@@ -1,11 +1,10 @@
-# Development Virtual Machines (go-vbox)
+# Development Virtual Machines
 
 This repo contains VirtualBox VM definitions that are created using Vagrantfiles.
 
 ## What's Installed
 
 * Debian 9.4
-* Go 10.3
 * Docker CE
 * Cinnamon desktop
 * Visual Studio Code
@@ -20,7 +19,7 @@ This repo contains VirtualBox VM definitions that are created using Vagrantfiles
 
 ## Building from Scratch
 
-1. Clone the repo to a directory on your local machine: `git clone https://github.com/twizzledink/go-dev-vm.git`
+1. Clone the repo to a directory on your local machine: `git clone https://github.com/twizzledink/vboxes.git`
 
 2. Open a command prompt or terminal and enter: `vagrant up`
 

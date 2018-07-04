@@ -6,9 +6,9 @@ Vagrant.configure("2") do |config|
 	config.vm.box = "debian/stretch64"
 	config.disksize.size = '20GB'
 	config.vm.box_version = "9.4.0"
-	config.vm.hostname = "golang-vbox"
+	config.vm.hostname = "golang-debian"
 	config.vm.provider "virtualbox" do |vb|
-		vb.name = "golang-vbox"
+		vb.name = "golang-debian"
 
 		# Adjust to about half of your system's memory; value is in MB.
 		vb.memory = "10240"
