@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-	config.vm.network "private_network", ip: "192.168.42.11"
+	config.vm.network "private_network", ip: "192.168.42.10"
 	config.vm.box = "debian/stretch64"
 	config.disksize.size = '20GB'
 	config.vm.box_version = "9.4.0"
@@ -26,10 +26,11 @@ Vagrant.configure("2") do |config|
 		vb.gui = true
 	end
 
-	config.vm.provision "file", source: "resources/sshd_config", destination: "sshd_config"
+	config.vm.provision "file", source: "../resources/sshd_config", destination: "sshd_config"
 
-	config.vm.provision "shell", path: "scripts/ssh.sh"
-	config.vm.provision "shell", path: "scripts/base-pkgs.sh"
-	config.vm.provision "shell", path: "scripts/docker-ce.sh"
+	config.vm.provision "shell", path: "../scripts/ssh.sh"
+	config.vm.provision "shell", path: "../scripts/prereqs.sh"
+	config.vm.provision "shell", path: "../scripts/vboxguestadd.sh"
+	config.vm.provision "shell", path: "../scripts/docker-ce.sh"
 	config.vm.provision "shell", inline: "sudo reboot"
 end
