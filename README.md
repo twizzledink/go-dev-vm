@@ -1,12 +1,12 @@
 # Development Virtual Machines
 
-This repo contains VirtualBox VM definitions that are created using Vagrantfiles.
+This repo contains VirtualBox VM definitions for various programming environments that are created using Vagrantfiles.
 
-## What's Installed
+## What's Commonly installed (all boxes)
 
 * Debian 9.4
 * Docker CE
-* Cinnamon desktop
+* Gnome (core desktop)
 * Visual Studio Code
 * Google Chrome
 
@@ -26,3 +26,7 @@ This repo contains VirtualBox VM definitions that are created using Vagrantfiles
 3. Wait for your new virtual machine to be built.
 
 4. login with: 'vagrant' for both the user name and password.
+
+## After Setup
+
+I recommend adding a new user for yourself after the fact and removing vagrant user.
